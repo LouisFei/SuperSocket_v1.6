@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
-using SuperSocket.SocketBase.Logging;
-using SuperSocket.SocketEngine;
 
 namespace SuperSocket.QuickStart.TelnetServer_AppSession
 {
@@ -13,11 +8,12 @@ namespace SuperSocket.QuickStart.TelnetServer_AppSession
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press any key to start the server!");
+            //Console.WriteLine("Press any key to start the server!");
 
-            Console.ReadKey();
-            Console.WriteLine();
+            //Console.ReadKey();
+            //Console.WriteLine();
 
+            //如果你想使用你的AppSession作为会话，你必须修改你的AppServer来使用它
             var appServer = new AppServer<TelnetSession>();
 
             var serverConfig = new ServerConfig
@@ -43,7 +39,7 @@ namespace SuperSocket.QuickStart.TelnetServer_AppSession
                 return;
             }
 
-            Console.WriteLine("The server started successfully, press key 'q' to stop it!");
+            Console.WriteLine($"The telnet server ({serverConfig.Port}) started successfully, press key 'q' to stop it!");
 
             while (Console.ReadKey().KeyChar != 'q')
             {

@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using SuperSocket.SocketBase.Config;
-using SuperSocket.SocketEngine;
-using SuperSocket.SocketBase.Logging;
 
 namespace SuperSocket.QuickStart.TelnetServer_AppServer
 {
@@ -12,10 +7,10 @@ namespace SuperSocket.QuickStart.TelnetServer_AppServer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Press any key to start the server!");
+            //Console.WriteLine("Press any key to start the server!");
 
-            Console.ReadKey();
-            Console.WriteLine();
+            //Console.ReadKey();
+            //Console.WriteLine();
 
             var appServer = new TelnetServer();
 
@@ -42,7 +37,7 @@ namespace SuperSocket.QuickStart.TelnetServer_AppServer
                 return;
             }
 
-            Console.WriteLine("The server started successfully, press key 'q' to stop it!");
+            Console.WriteLine($"The telnet server ({serverConfig.Port}) started successfully, press key 'q' to stop it!");
 
             while (Console.ReadKey().KeyChar != 'q')
             {
@@ -59,3 +54,11 @@ namespace SuperSocket.QuickStart.TelnetServer_AppServer
         }
     }
 }
+
+/*
+     实现你自己的AppSession和AppServer允许你根据你业务的需求来方便的扩展SuperSocket，
+     你可以绑定session的连接和断开事件，服务器实例的启动和停止事件。
+
+     你还可以在AppServer的Setup方法中读取你的自定义配置信息。
+     总而言之，这些功能让你方便的创建一个你所需要的socket服务器成为可能。
+ */
