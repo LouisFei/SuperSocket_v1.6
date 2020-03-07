@@ -37,7 +37,7 @@ you must be able to use SuperSocket to build your socket application as a part o
 ## SuperSocket 对象模型图示意图
 ![SuperSocket 对象模型图示意图](doc/objectmodel.jpg)
 ## SuperSocket 请求处理模型示意图
-![SuperSocket 请求处理模型示意图_requesthandlingmodel](doc/requesthandlingmodel.jpg)
+![SuperSocket 请求处理模型示意图](doc/requesthandlingmodel.jpg)
 ## SuperSocket 隔离模型示意图
 ![SuperSocket 隔离模型示意图](doc/isolationmodel.jpg)
 
