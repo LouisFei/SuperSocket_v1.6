@@ -31,5 +31,15 @@ you must be able to use SuperSocket to build your socket application as a part o
 [5]: https://img.shields.io/nuget/v/SuperSocket.WebSocket.svg?style=flat
 [6]: https://www.nuget.org/packages/SuperSocket.WebSocket
 
+# 架构设计示意图
+## SuperSocket 层次示意图
+![SuperSocket层次示意图_layermodel](doc/layermodel.jpg)
+## SuperSocket 对象模型图示意图
+![SuperSocket 对象模型图示意图](doc/objectmodel.jpg)
+## SuperSocket 请求处理模型示意图
+![SuperSocket 请求处理模型示意图_requesthandlingmodel](doc/requesthandlingmodel.jpg)
+## SuperSocket 隔离模型示意图
+![SuperSocket 隔离模型示意图](doc/isolationmodel.jpg)
+
 
 *Copyright 2010-2015 Kerry Jiang (kerry-jiang@hotmail.com)*
