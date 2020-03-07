@@ -1,5 +1,7 @@
 ﻿using SuperSocket.SocketBase;
 using SuperSocket.SocketBase.Config;
+using SuperSocket.SocketBase.Protocol;
+using System.Text;
 
 namespace SuperSocket.QuickStart.TelnetServer_AppServer
 {
@@ -11,6 +13,13 @@ namespace SuperSocket.QuickStart.TelnetServer_AppServer
     /// </summary>
     public class TelnetServer : AppServer<TelnetSession>
     {
+        //自定义你的命令行协议
+        public TelnetServer()
+            : base(new CommandLineReceiveFilterFactory(Encoding.Default, new BasicRequestInfoParser(":", ",")))
+        {
+            //login:aa,bb
+        }
+
         protected override bool Setup(IRootConfig rootConfig, IServerConfig config)
         {
             return base.Setup(rootConfig, config);

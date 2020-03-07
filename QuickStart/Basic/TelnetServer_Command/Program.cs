@@ -45,7 +45,7 @@ namespace TelnetServer_Command
                 return;
             }
 
-            Console.WriteLine("The server started successfully, press key 'q' to stop it!");
+            Console.WriteLine($"The telnet server ({serverConfig.Port}) started successfully, press key 'q' to stop it!");
 
             while (Console.ReadKey().KeyChar != 'q')
             {

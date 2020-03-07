@@ -1,17 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace SuperSocket.SocketBase.Protocol
 {
     /// <summary>
     /// CommandLine RequestFilter Factory
+    /// 命令行请求过滤工厂
     /// </summary>
     public class CommandLineReceiveFilterFactory : TerminatorReceiveFilterFactory
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandLineReceiveFilterFactory"/> class.
+        /// 命令行协议的默认编码是 Ascii
         /// </summary>
         public CommandLineReceiveFilterFactory()
             : this(Encoding.ASCII)

@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SuperSocket.SocketBase.Protocol
 {
     /// <summary>
-    /// Basic request info parser, which parse request info by separating
+    /// Basic request info parser, which parse request info by separating.
+    /// 基本的请求信息解析器，它通过分符号来解析请求信息。
     /// </summary>
+    /// <remarks>
+    /// 如果你想更深度的定义请求的格式, 你可以基于接口 IRequestInfoParser 来实现一个 RequestInfoParser 类, 
+    /// 然后当实例化 CommandLineReceiveFilterFactory 时传入拟定一个 RequestInfoParser 实例。
+    /// </remarks>
     public class BasicRequestInfoParser : IRequestInfoParser<StringRequestInfo>
     {
         private readonly string m_Spliter;
