@@ -1,13 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
+
 using SuperSocket.Common;
 
 namespace SuperSocket.SocketBase.Protocol
 {
     /// <summary>
     /// Terminator Receive filter
+    /// 结束符协议（内置的常用协议实现模版之一）
+    /// 与命令行协议类似，一些协议用结束符来确定一个请求.
+    /// 例如, 一个协议使用两个字符 "##" 作为结束符, 于是你可以使用类 "TerminatorReceiveFilterFactory":
     /// </summary>
     /// <typeparam name="TRequestInfo">The type of the request info.</typeparam>
     public abstract class TerminatorReceiveFilter<TRequestInfo> : ReceiveFilterBase<TRequestInfo>, IOffsetAdapter, IReceiveFilterInitializer

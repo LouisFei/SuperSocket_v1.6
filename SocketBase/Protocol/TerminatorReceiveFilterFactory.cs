@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Text;
 
@@ -8,6 +6,7 @@ namespace SuperSocket.SocketBase.Protocol
 {
     /// <summary>
     /// Terminator ReceiveFilter Factory
+    /// 结束符协议工厂
     /// </summary>
     public class TerminatorReceiveFilterFactory : IReceiveFilterFactory<StringRequestInfo>
     {

@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NUnit.Framework;
-using SuperSocket.SocketBase;
-using SuperSocket.SocketEngine;
 using System.Net;
 using System.Net.Sockets;
 using System.IO;
 using System.Threading;
+
+using NUnit.Framework;
+
+using SuperSocket.SocketBase;
+using SuperSocket.SocketEngine;
 
 namespace SuperSocket.QuickStart.TerminatorProtocol
 {
